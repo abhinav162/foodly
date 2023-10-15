@@ -1,0 +1,42 @@
+<!-- Banner Carousel -->
+<div class="banner-carousal">
+    <div class="carousal-image" [@slideAnimation] = "currentSlide">
+        <div class="carousal-item" *ngFor="let banner of banners; let i = index">
+            <img
+                *ngIf="i === currentSlide"
+                [src]="banner.bannerImageUrl"
+                alt="banner"
+                class="banner-image"
+            >
+        </div>
+    </div>
+    
+    <button mat-icon-button class="carousal-control carousal-control-left" (click)="onPreviousClick()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+
+    <button mat-icon-button class="carousal-control carousal-control-right" (click)="onNextClick()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+
+    <div class="carousal-indicators">
+        <div class="carousal-indicator" *ngFor="let banner of banners; let i = index"
+            [ngClass]="{'active': i === currentSlide}">
+        </div>
+    </div>
+</div>
+
+<!-- Complete Item -->
+<h1>Menu</h1>
+
+<div class="food-container">
+    <div class="food-item" *ngFor="let product of products">
+        <img src='{{product.imageUrl}}' alt="food" class="food-image">
+        <div class="food-details">
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <p>{{product.price | currency:'INR'}}</p>
+        </div>
+        <button mat-raised-button color="primary">Add to cart</button>
+    </div>
+</div>
