@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { SwiperOptions } from 'swiper';
+
 
 @Component({
   selector: 'app-home',
@@ -26,7 +28,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
         style({ transform: 'translateX(100%)' }),
         animate('500ms', style({ transform: 'translateX(0)' })),
       ]),
-    ]),
+    ]),    
   ],
 })
 export class HomeComponent implements OnInit {
@@ -36,16 +38,17 @@ export class HomeComponent implements OnInit {
     // this.startSlideShow();
   }
 
+  preloadImages() {
+    for (let i = 0; i < this.banners.length; i++) {
+      const img = new Image();
+      img.src = this.banners[i].bannerImageUrl;
+    }
+  }
+
   startSlideShow() {
     setInterval(() => {
       this.onNextClick();
     }, 2000);
-  }
-
-  preloadImages() {
-    for (const banner of this.banners) {
-      new Image().src = banner.bannerImageUrl;
-    }
   }
 
   products = [
@@ -218,5 +221,15 @@ export class HomeComponent implements OnInit {
   onNextClick() {
     this.currentSlide = (this.currentSlide + 1) % this.banners.length;
   }
+
+
+  config: SwiperOptions = {
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30
+  };
 
 }

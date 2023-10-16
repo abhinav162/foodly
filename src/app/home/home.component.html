@@ -1,16 +1,11 @@
 <!-- Banner Carousel -->
-<div class="banner-carousal">
-    <div class="carousal-image" [@slideAnimation] = "currentSlide">
-        <div class="carousal-item" *ngFor="let banner of banners; let i = index">
-            <img
-                *ngIf="i === currentSlide"
-                [src]="banner.bannerImageUrl"
-                alt="banner"
-                class="banner-image"
-            >
+<!-- <div class="banner-carousal">
+    <div class="carousal-image" [@slideAnimation]="currentSlide" *ngFor="let banner of banners; let i = index">
+        <div class="carousal-item">
+            <img *ngIf="i === currentSlide" [src]="banner.bannerImageUrl" alt="banner" class="banner-image">
         </div>
     </div>
-    
+
     <button mat-icon-button class="carousal-control carousal-control-left" (click)="onPreviousClick()">
         <mat-icon>keyboard_arrow_left</mat-icon>
     </button>
@@ -24,7 +19,18 @@
             [ngClass]="{'active': i === currentSlide}">
         </div>
     </div>
-</div>
+</div> -->
+
+<!-- banner 2 -->
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <img class="swiper-slide" *ngFor="let banner of banners" [src]="banner.bannerImageUrl" />
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
 
 <!-- Complete Item -->
 <h1>Menu</h1>
