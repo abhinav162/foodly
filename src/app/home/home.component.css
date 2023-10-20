@@ -109,3 +109,19 @@
   align-items: center;
   margin-top: 10px;
 }
+
+.food-container .food-item .inc-dec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.food-container .food-item .inc-dec button {
+  height: 30px;
+  width: 30px;
+}
+
+.food-container .food-item .inc-dec .add-cart {
+  width: 40% !important;
+}

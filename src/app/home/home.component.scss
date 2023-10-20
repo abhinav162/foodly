@@ -105,5 +105,22 @@
             align-items: center;
             margin-top: 10px;
         }
+
+        .inc-dec {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            button {
+                height: 30px;
+                width: 30px;
+                // border-radius: 50%;
+            }
+
+            .add-cart {
+                width: 40% !important;
+            }
+        }
     }
 }

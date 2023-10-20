@@ -1,16 +1,11 @@
 <!-- Banner Carousel -->
 <div class="banner-carousal">
-    <div class="carousal-image" [@slideAnimation] = "currentSlide">
+    <div class="carousal-image" [@slideAnimation]="currentSlide">
         <div class="carousal-item" *ngFor="let banner of banners; let i = index">
-            <img
-                *ngIf="i === currentSlide"
-                [src]="banner.bannerImageUrl"
-                alt="banner"
-                class="banner-image"
-            >
+            <img *ngIf="i === currentSlide" [src]="banner.bannerImageUrl" alt="banner" class="banner-image">
         </div>
     </div>
-    
+
     <button mat-icon-button class="carousal-control carousal-control-left" (click)="onPreviousClick()">
         <mat-icon>keyboard_arrow_left</mat-icon>
     </button>
@@ -37,6 +32,11 @@
             <p>{{product.description}}</p>
             <p>{{product.price | currency:'INR'}}</p>
         </div>
-        <button mat-raised-button color="primary">Add to cart</button>
+        <div class="inc-dec">
+            <button mat-raised-button color="primary" (click)="decQuantity()">-</button>
+            <span>0</span>
+            <button mat-raised-button color="primary" (click)="incQuantity()">+</button>
+            <button mat-raised-button color="primary" class="add-cart">Add to cart</button>
+        </div>
     </div>
 </div>
