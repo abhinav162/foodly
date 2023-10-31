@@ -1,0 +1,31 @@
+<div class="cart-header">
+    <h2 mat-dialog-title style="text-align: center;">CART</h2>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>X</button>
+        <!-- <button mat-button cdkFocusInitial>Install</button> -->
+    </mat-dialog-actions>
+</div>
+
+<mat-dialog-content class="mat-typography">
+    <div *ngFor="let item of cart">
+        <div class="item">
+            <img src="{{item.imageUrl}}" alt="">
+            <div class="item-details">
+                <h2>{{item.name}} <span><button mat-button (click)="deleteFromCart(item.id)">x</button></span> </h2>
+                <div class="quantity-price">
+                    <p>Quantity : {{item.quantity}}</p>
+                    <p>Price : {{item.price | currency:'INR'}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="checkout-container">
+    <div class="sub-total">
+        <p>Total : {{total | currency:'INR'}}</p>
+        <p>Discount : {{discount}}%</p>
+        <p><b>Sub Total : {{subtotal | currency:'INR'}}</b></p>
+    </div>
+    <button mat-raised-button color="primary">Checkout</button>
+</mat-dialog-actions>

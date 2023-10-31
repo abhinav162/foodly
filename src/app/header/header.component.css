@@ -1,7 +1,15 @@
+/* import fontawesome cdn */
 @import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
 :host {
+  position: fixed;
   z-index: 1;
   width: 100%;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+:host .logo {
+  width: 100px;
+  margin: 12px 12px 0 12px;
 }
 
 .spacer {

@@ -11,6 +11,6 @@ export class LoginComponent {
   public password: string = "";
 
   onButtonClick() {
-    console.log("Clicked");
+    // navigate to home page
   }
 }

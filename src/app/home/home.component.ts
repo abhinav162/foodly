@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { products } from './products';
+import { dataset } from '../dataset';
 
 @Component({
   selector: 'app-home',
@@ -31,17 +31,17 @@ import { products } from './products';
   ],
 })
 export class HomeComponent implements OnInit {
-  products = products;
+  products = dataset.products;
 
   ngOnInit() {
     this.preloadImages(); // for the demo
-    // this.startSlideShow();
+    this.startSlideShow();
   }
 
   startSlideShow() {
     setInterval(() => {
       this.onNextClick();
-    }, 2000);
+    }, 3000);
   }
 
   preloadImages() {
@@ -78,11 +78,15 @@ export class HomeComponent implements OnInit {
     this.currentSlide = (this.currentSlide + 1) % this.banners.length;
   }
 
-  decQuantity() {
 
+  incQuantity(i: any) {
+    const q = document.querySelectorAll(`.quantity`)[i].innerHTML;
+    document.querySelectorAll(`.quantity`)[i].innerHTML = `${+q + 1}`;
   }
-
-  incQuantity() {
-
+  decQuantity(i: any) {
+    const q = document.querySelectorAll(`.quantity`)[i].innerHTML;
+    if (+q > 1) {
+      document.querySelectorAll(`.quantity`)[i].innerHTML = `${+q - 1}`;
+    }
   }
 }

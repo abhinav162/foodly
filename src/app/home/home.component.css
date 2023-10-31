@@ -118,10 +118,17 @@
 }
 
 .food-container .food-item .inc-dec button {
-  height: 30px;
-  width: 30px;
+  box-shadow: none;
+}
+
+.food-container .food-item .inc-dec .plus-minus-grp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .food-container .food-item .inc-dec .add-cart {
-  width: 40% !important;
+  width: 50%;
+  height: 40px;
 }

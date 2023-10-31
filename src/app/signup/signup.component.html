@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <h1>SIGNUP</h1>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="test@test.com" type="text" autocomplete="off" [(ngModel)]="name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="test@test.com" type="text" autocomplete="off" [(ngModel)]="username" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput type="number" [(ngModel)]="phone" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onButtonClick()">SIGNUP</button>
+</div>

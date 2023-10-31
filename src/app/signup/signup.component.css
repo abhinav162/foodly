@@ -9,9 +9,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-color: rgba(147, 201, 255, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
 }
 
 .wrapper mat-form-field {
