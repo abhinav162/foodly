@@ -1,13 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --accent1: #f1f1f1;
+    --accent2: beige;
+    --accent2: #3f51b5;
+}
+
+* {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-}
-
-html,
-body {
     height: 100%;
 }
 
@@ -15,5 +17,3 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

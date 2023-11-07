@@ -1,11 +1,14 @@
 :host {
     position: relative;
-    // top: 65px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    .menu-heading {
+        margin: 10px;
+    }
 }
 
 .banner-carousal {
@@ -86,12 +89,16 @@
     gap: 20px;
     width: 80%;
     margin: auto;
+    padding: 20px;
 
     .food-item {
-        border: 1px solid black;
+        // border: 1px solid black;
+        background-color: var(--accent3);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         width: 320px;
         padding: 10px;
+        transition: all 0.3s ease-in-out;
 
         img {
             width: 100%;
@@ -127,6 +134,12 @@
                 width: 50%;
                 height: 40px;
             }
+        }
+
+        // hover
+        &:hover {
+            transform: scale(1.02);
+            // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
     }
 }

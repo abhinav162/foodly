@@ -1,0 +1,112 @@
+:host {
+  position: relative;
+  width: 100%;
+}
+
+:host .contact-banner {
+  background-image: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(30%);
+}
+
+:host .contact-banner h1 {
+  font-size: 3.5rem;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  :host .contact-banner {
+    height: 30vh;
+  }
+  :host .contact-banner h1 {
+    font-size: 1.5rem;
+  }
+}
+
+:host .contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+:host .contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  width: 30rem;
+  align-self: flex-end;
+  gap: 1rem;
+  padding: 5rem 5rem 5rem 10rem;
+}
+
+:host .contact-form form button {
+  width: 10rem;
+  align-self: flex-start;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+:host .contact-form .support-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+  width: 40%;
+  justify-self: right;
+  align-items: center;
+  padding: 5rem 0 0 0;
+}
+
+:host .contact-form .support-cards > div {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+:host .contact-form .support-cards > div h2 {
+  font-size: 1.5rem;
+}
+
+:host .contact-form .support-cards > div p {
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1000px) {
+  :host .contact-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  :host .contact-form .contact-form {
+    width: 100%;
+    align-self: center;
+    padding: 2rem;
+  }
+  :host .contact-form form {
+    align-self: center;
+    padding: 2rem;
+    width: 80%;
+  }
+  :host .contact-form .support-cards {
+    width: 80%;
+    align-self: center !important;
+    padding: 1rem;
+  }
+  :host .contact-form .support-cards > div {
+    width: 80%;
+    overflow: hidden;
+  }
+}

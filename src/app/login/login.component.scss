@@ -4,21 +4,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(147, 201, 255, 0.1);
-    // color: white;
-    padding: 2rem;
-    border-radius: 10px;
+    background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 
-    mat-form-field {
-        width: 350px;
-    }
+    .wrapper {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 1);
+        // color: white;
+        padding: 2rem;
+        border-radius: 10px;
 
-    h1 {
-        margin-bottom: 1rem;
+        mat-form-field {
+            width: 350px;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+        }
     }
 }

@@ -4,17 +4,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
-.wrapper {
+:host .wrapper {
+  margin: auto;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-.wrapper mat-form-field {
+:host .wrapper mat-form-field {
   width: 350px;
 }
 
-.wrapper h1 {
+:host .wrapper h1 {
   margin-bottom: 1rem;
 }
