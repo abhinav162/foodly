@@ -4,8 +4,8 @@
     </span>
     <span class="spacer"></span>
     <a mat-button routerLink="/">Home</a>
-    <a mat-button routerLink="/products">Products</a>
-    <a mat-button routerLink="/about">About</a>
+    <!-- <a mat-button routerLink="/products">Products</a>
+    <a mat-button routerLink="/about">About</a> -->
     <a mat-button routerLink="/contact">Contact</a>
 
     <span class="spacer"></span>
@@ -45,9 +45,13 @@
 <!-- Menu Options -->
 <div class="mobile-links" id="moblinks">
     <a (click)="closeLinks()" routerLink="/">Home</a>
-    <a (click)="closeLinks()" routerLink="/products">Products</a>
-    <a (click)="closeLinks()" routerLink="/about">About</a>
+    <!-- <a (click)="closeLinks()" routerLink="/products">Products</a>
+    <a (click)="closeLinks()" routerLink="/about">About</a> -->
     <a (click)="closeLinks()" routerLink="/contact">Contact</a>
-    <a color="primary" (click)="closeLinks()" routerLink="/login">Login</a>
-    <a color="primary" (click)="closeLinks()" routerLink="/signup">Signup</a>
+    <a color="primary" (click)="closeLinks()" routerLink="/login">
+        <button mat-flat-button color="primary" >Login</button>
+    </a>
+    <a color="primary" (click)="closeLinks()" routerLink="/signup">
+        <button mat-flat-button color="primary">Signup</button>
+    </a>
 </div>
