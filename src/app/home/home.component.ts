@@ -89,4 +89,6 @@ export class HomeComponent implements OnInit {
       document.querySelectorAll(`.quantity`)[i].innerHTML = `${+q - 1}`;
     }
   }
+
+  testimonials = dataset.testimonials;
 }

@@ -136,5 +136,36 @@ export const dataset = {
                 quantity: 1
             }
         ]
-    }
+    },
+
+    testimonials: [
+        {
+            id: 1,
+            name: 'Miguel Gaytán',
+            designation: 'CEO',
+            imageUrl: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600',
+            comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+        },
+        {
+            id: 2,
+            name: 'Dumont',
+            designation: 'Manager',
+            imageUrl: 'https://randomuser.me/api/portraits/men/46.jpg',
+            comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+        },
+        {
+            id: 3,
+            name: 'Phoebe Walker',
+            designation: 'Designer',
+            imageUrl: 'https://randomuser.me/api/portraits/women/47.jpg',
+            comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+        },
+        {
+            id: 4,
+            name: 'Charlie Graves',
+            designation: 'Bussinessman',
+            imageUrl: 'https://randomuser.me/api/portraits/men/7.jpg',
+            comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+        }
+    ]
 }

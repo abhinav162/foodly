@@ -8,7 +8,7 @@
 }
 
 :host .menu-heading {
-  margin: 10px;
+  margin: 20px 0 10px 0;
   text-align: left;
   background-color: #ff9d00;
   padding: 10px 50px;
@@ -54,6 +54,60 @@
   font-family: monospace;
   border: 1px dashed black;
   padding: 5px;
+}
+
+:host .testimonials {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 3rem 0;
+  padding: 0 5rem;
+}
+
+:host .testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 20rem;
+}
+
+:host .testimonials .testimonial .person-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+:host .testimonials .testimonial .person-info img {
+  height: 5rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+:host .testimonials .testimonial .person-info .name-des h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+:host .testimonials .testimonial .person-info .name-des p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+:host .testimonials .testimonial .testimony p {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 1.5rem 0;
 }
 
 .banner-carousal {
@@ -136,7 +190,7 @@
   align-items: center;
   gap: 20px;
   width: 80%;
-  margin: auto;
+  margin: 20px;
   padding: 20px;
 }
 

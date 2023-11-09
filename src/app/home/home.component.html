@@ -33,6 +33,7 @@
 
 <!-- Complete Item -->
 <h1 class="menu-heading">What we have</h1>
+
 <div class="food-container">
     <div class="food-item" *ngFor="let product of products; let i = index">
         <div class="img-div">
@@ -60,6 +61,26 @@
                 <mat-icon>shopping_cart</mat-icon>
                 Add To Cart
             </button>
+        </div>
+    </div>
+</div>
+
+<h1 class="menu-heading">TESTIMONIALS</h1>
+
+<div class="testimonials">
+    <div class="testimonial" *ngFor="let testimonial of testimonials">
+        <div class="scroll-cards">
+            <div class="person-info">
+                <img src={{testimonial.imageUrl}} alt="">
+                <div class="name-des">
+                    <h2>{{testimonial.name}}</h2>
+                    <p>{{testimonial.designation}}</p>
+                </div>
+            </div>
+
+            <div class="testimony">
+                <p>{{testimonial.comment}}</p>
+            </div>
         </div>
     </div>
 </div>
