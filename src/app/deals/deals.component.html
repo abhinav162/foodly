@@ -1,0 +1,64 @@
+<h1 class="heading-30">Upto 30% off</h1>
+
+<div class="food-container">
+    <div class="food-item" *ngFor="let product of product_thirty; let i = index">
+        <div class="img-div">
+            <img src='{{product.imageUrl}}' alt="food" class="food-image">
+
+            <!-- check if offer is there or not -->
+            <div class="offer-tag" *ngIf="product.offer">
+                <p>{{product.offer}}%</p>
+            </div>
+        </div>
+
+        <div class="food-details">
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <p>{{product.price | currency:'INR'}}</p>
+        </div>
+        <div class="inc-dec">
+            <div class="plus-minus-grp">
+                <button mat-mini-fab color="primary" (click)="decQuantity(i)">-</button>
+                <span> <label for="" aria-valuemin="1" class="quantity">1</label> </span>
+                <button mat-mini-fab color="primary" (click)="incQuantity(i)">+</button>
+            </div>
+            <!-- <button mat-raised-button color="primary" class="add-cart">Add to cart</button> -->
+            <button mat-fab extended color="primary" class="add-cart">
+                <mat-icon>shopping_cart</mat-icon>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+<h1 class="heading-30">Upto 50% off</h1>
+<div class="food-container">
+    <div class="food-item" *ngFor="let product of product_fifty; let i = index">
+        <div class="img-div">
+            <img src='{{product.imageUrl}}' alt="food" class="food-image">
+
+            <!-- check if offer is there or not -->
+            <div class="offer-tag" *ngIf="product.offer">
+                <p>{{product.offer}}%</p>
+            </div>
+        </div>
+
+        <div class="food-details">
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <p>{{product.price | currency:'INR'}}</p>
+        </div>
+        <div class="inc-dec">
+            <div class="plus-minus-grp">
+                <button mat-mini-fab color="primary" (click)="decQuantity(i)">-</button>
+                <span> <label for="" aria-valuemin="1" class="quantity">1</label> </span>
+                <button mat-mini-fab color="primary" (click)="incQuantity(i)">+</button>
+            </div>
+            <!-- <button mat-raised-button color="primary" class="add-cart">Add to cart</button> -->
+            <button mat-fab extended color="primary" class="add-cart">
+                <mat-icon>shopping_cart</mat-icon>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>

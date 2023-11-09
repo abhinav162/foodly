@@ -19,6 +19,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactComponent } from './contact/contact.component';
+import { DealsComponent } from './deals/deals.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     CartComponent,
     SignupComponent,
-    ContactComponent
+    ContactComponent,
+    DealsComponent
   ],
   imports: [
     BrowserModule,

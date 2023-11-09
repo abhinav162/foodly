@@ -21,12 +21,29 @@
     </div>
 </div>
 
-<!-- Complete Item -->
-<h1 class="menu-heading">Menu</h1>
+<!-- Offers -->
+<div class="offer-container">
+    <img src="../../assets/50off.png" alt="" class="offer-img">
+    <div class="offer-details">
+        <h2>Get upto 50% off on your first order</h2>
+        <p>Use code <span class="offer-code">FIRSTFOOD</span></p>
+        <button mat-raised-button color="primary" class="offer-btn" routerLink="/deals">Order Now</button>
+    </div>
+</div>
 
+<!-- Complete Item -->
+<h1 class="menu-heading">What we have</h1>
 <div class="food-container">
     <div class="food-item" *ngFor="let product of products; let i = index">
-        <img src='{{product.imageUrl}}' alt="food" class="food-image">
+        <div class="img-div">
+            <img src='{{product.imageUrl}}' alt="food" class="food-image">
+
+            <!-- check if offer is there or not -->
+            <div class="offer-tag" *ngIf="product.offer">
+                <p>{{product.offer}}%</p>
+            </div>
+        </div>
+
         <div class="food-details">
             <h2>{{product.name}}</h2>
             <p>{{product.description}}</p>

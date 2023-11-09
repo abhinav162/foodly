@@ -16,6 +16,7 @@
 
 :host mat-dialog-content {
   height: 400px;
+  width: 25rem;
 }
 
 :host mat-dialog-content .item {
@@ -65,6 +66,13 @@
   align-items: center;
   gap: 10px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  :host mat-dialog-content {
+    height: 300px;
+    width: 300px;
+  }
 }
 
 :host .checkout-container {

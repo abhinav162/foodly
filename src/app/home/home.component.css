@@ -9,6 +9,51 @@
 
 :host .menu-heading {
   margin: 10px;
+  text-align: left;
+  background-color: #ff9d00;
+  padding: 10px 50px;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+}
+
+:host .offer-container {
+  background-image: url("https://img.freepik.com/free-vector/soft-yellow-watercolor-texture-background_1055-10236.jpg?t=st=1699538539~exp=1699539139~hmac=a0a3445fd0506232ffd71047637696a6fa539c0f7191f36a32df801d10625902");
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px dashed red;
+  padding: 20px;
+  width: calc(80% - 60px);
+  margin: 3rem 0;
+}
+
+:host .offer-container img {
+  height: 15rem;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+:host .offer-container .offer-details h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+:host .offer-container .offer-details p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 25px 0 15px 0;
+}
+
+:host .offer-container .offer-details p .offer-code {
+  font-family: monospace;
+  border: 1px dashed black;
+  padding: 5px;
 }
 
 .banner-carousal {
@@ -104,10 +149,35 @@
   transition: all 0.3s ease-in-out;
 }
 
-.food-container .food-item img {
+.food-container .food-item .img-div {
+  position: relative;
+}
+
+.food-container .food-item .img-div img {
   width: 100%;
   height: 200px;
   border-radius: 10px;
+}
+
+.food-container .food-item .img-div .offer-tag {
+  background-color: red;
+  width: 30px;
+  height: 40px;
+  padding: 0.2rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.food-container .food-item .img-div .offer-tag p {
+  position: relative;
+  top: 20%;
+  font-weight: 500;
+  margin: 0;
+  padding: auto;
+  text-align: center;
+  color: white;
 }
 
 .food-container .food-item .food-details {

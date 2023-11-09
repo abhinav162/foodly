@@ -33,6 +33,10 @@
             padding: 10px 35px;
             width: 100%;
         }
+        
+        a:not(.btn) {
+            padding: 20px 35px;
+        }
 
         a:hover {
             color: white;
